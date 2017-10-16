@@ -1,15 +1,15 @@
 <script type="text/javascript">
 function newSite() {
-    var sites = ""
-    if((document.getElementById('descriptionFrame').src).indexOf(description_it) !== -1)
+    var sites;
+    if((document.getElementById('descriptionFrame').src).indexOf("description_it") !== -1)
     {
-	document.getElementById('button').value = "Cambia lingua"
-    	sites = 'https://luigichiricosta.github.io/description_it.html'
+	document.getElementById('lang').value = "Change language"
+    	sites = 'https://luigichiricosta.github.io/description_en.html'
     }
     else
     {
-	document.getElementById('button').value = "Change language"
-    	sites = 'https://luigichiricosta.github.io/description_en.html'
+	document.getElementById('lang').value = "Cambia lingua"
+    	sites = 'https://luigichiricosta.github.io/description_it.html'
     }
     document.getElementById('descriptionFrame').src = sites;
 }    
@@ -20,7 +20,8 @@ function newSite() {
 	<title>Luigi Chiricosta</title>
 	<body height="100%" style="margin: 0 !important; padding: 0 !important;">
 		<div align="center" style="font-size:250%; background-color:#CCEEFF; color:black"><br><i>Dr.</i> <b>Luigi Chiricosta</b><br><br></div>
-		<br><input type="button" value="Change language" onClick="newSite()" /><br>
+		<br>
+		<div align="center"><input id="lang" type="button" value="Change language" onClick="newSite()" /><br></div>
 		<table style="width:100%" height="100%">
 			<tr height="100%">
 				<td valign="top" width="17%">
