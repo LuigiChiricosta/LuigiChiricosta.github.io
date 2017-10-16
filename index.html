@@ -1,9 +1,26 @@
+<script type="text/javascript">
+function newSite() {
+    var sites = ""
+    if((document.getElementById('descriptionFrame').src).indexOf(description_it) !== -1)
+    {
+	document.getElementById('button').value = "Cambia lingua"
+    	sites = 'https://luigichiricosta.github.io/description_it.html'
+    }
+    else
+    {
+	document.getElementById('button').value = "Change language"
+    	sites = 'https://luigichiricosta.github.io/description_en.html'
+    }
+    document.getElementById('descriptionFrame').src = sites;
+}    
+</script>
+
 <!DOCTYPE html>
 <html>
 	<title>Luigi Chiricosta</title>
 	<body height="100%" style="margin: 0 !important; padding: 0 !important;">
 		<div align="center" style="font-size:250%; background-color:#CCEEFF; color:black"><br><i>Dr.</i> <b>Luigi Chiricosta</b><br><br></div>
-		<br><br>
+		<br><input type="button" value="Change language" onClick="newSite()" /><br>
 		<table style="width:100%" height="100%">
 			<tr height="100%">
 				<td valign="top" width="17%">
@@ -21,7 +38,7 @@
 					</table>
 				</td>
 				<td valign="top" width="65%" height="100%" bgcolor="#CCEEFF" style="padding:1%">
-					<iframe height="100%" src="https://luigichiricosta.github.io/description_en.html" style="top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Error in the description</iframe> 
+					<iframe id="descriptionFrame" height="100%" src="https://luigichiricosta.github.io/description_en.html" style="top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Error in the description</iframe> 
 				</td>
 				<td valign="top" width="200px">
 					<img src="LuigiChiricosta.github.io/XT2B9616.jpg" alt="Foto personale non trovata." width="90%" style="padding:5%"/>
