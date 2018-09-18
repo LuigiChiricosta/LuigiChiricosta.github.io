@@ -5,12 +5,14 @@ function newSite() {
     if((document.getElementById('descriptionFrame').src).indexOf("description_it") !== -1)
     {
 	document.getElementById('lang').value = "Cambia lingua"
+    	document.getElementById('flag').src = "https://raw.githubusercontent.com/LuigiChiricosta/LuigiChiricosta.github.io/master/bandieraITA.png";
     	description = 'https://luigichiricosta.github.io/description_en.html'
     	contacts = 'https://luigichiricosta.github.io/contacts_en.html'
     }
     else
     {
 	document.getElementById('lang').value = "Change language"
+    	document.getElementById('flag').src = "https://raw.githubusercontent.com/LuigiChiricosta/LuigiChiricosta.github.io/master/bandieraUK.png";
     	description = 'https://luigichiricosta.github.io/description_it.html'
     	contacts = 'https://luigichiricosta.github.io/contacts_it.html'
     }
@@ -25,7 +27,7 @@ function newSite() {
 	<body style="margin: 0 !important; padding: 0 !important;">
 		<div align="center" style="padding:1%; position:relative; width:100%; font-size:250%; background-color:#CCEEFF; color:black">
 			<i>Dr.</i> <b>Luigi Chiricosta</b>
-			<img align="middle" src="https://raw.githubusercontent.com/LuigiChiricosta/LuigiChiricosta.github.io/master/bandieraITA.png" style="padding:0%; height:35%; width:3%; position:absolute; right:3%; top:10%"/>
+			<img id="flag"; align="middle" src="https://raw.githubusercontent.com/LuigiChiricosta/LuigiChiricosta.github.io/master/bandieraITA.png" style="padding:0%; height:35%; width:3%; position:absolute; right:3%; top:10%"/>
 		</div>
 		<div style="width:98%; height:10%; padding:1%">
 			<table style="width:10%; height:100%;float:left">
@@ -56,7 +58,7 @@ function newSite() {
 				</tbody>	
 			</table>
 		</div>	
-		<div align="center" style="width:100%"><input id="lang" type="button" value="Cambia Lingua" onClick="newSite()" /></div>
+		<div align="center" style="width:100%"><input id="lang" type="button" value="Cambia lingua" onClick="newSite()" /></div>
 		<table style="height:60%">
 		    <tbody style="height:100%">
 			<tr style="height:100%">
